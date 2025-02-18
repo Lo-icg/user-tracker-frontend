@@ -1,0 +1,240 @@
+/* Centering the container */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  /* Styling headings */
+  h2 {
+    color: #333;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Button styles */
+  button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  /* Link-like button */
+  .switch-button {
+    background: none;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .switch-button:hover {
+    text-decoration: underline;
+  }
+  /* Dashboard container */
+.dashboard-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  /* Dashboard heading */
+  .dashboard-container h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+ /* Logout Button on Top Right */
+ .logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff4d4d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .logout-button:hover {
+    background: #cc0000;
+  }
+  
+  /* Map container */
+  .map-container {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+    border: 2px solid #007bff;
+  }
+  /* Home Page Container */
+.home-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Widgets Layout */
+  .widget-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  /* Individual Widget */
+  .widget-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+  }
+  
+  .widget {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .widget:hover {
+    background: #ddd;
+  }
+  
+ /* Home Button - Move to Top Left */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .home-button:hover {
+    background: #218838;
+  }
+  .welcome-text {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 24px;
+  }
+ /* Devices Container */
+.devices-container {
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+  }
+  /* History Page Styling */
+.history-container {
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+  }
+  /* History Table Styling */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .history-table th, .history-table td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+  
+  }
+  
+  .history-table th {
+    background-color: #007bff;
+    color: white;
+    
+  }
+  
+  .history-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Positioning the Menu and Logout Buttons */
+.menu-button, .logout-button {
+    position: absolute;
+    top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Logout Button - Rightmost */
+.logout-button {
+    right: 20px;
+    background: #ff4d4d;
+    color: white;
+}
+
+.logout-button:hover {
+    background: #cc0000;
+}
+
+/* Menu Button - Left of Logout */
+.menu-button {
+    right: 130px; /* Adjust spacing */
+    background: #007bff;
+    color: white;
+}
+
+.menu-button:hover {
+    background: #0056b3;
+}
