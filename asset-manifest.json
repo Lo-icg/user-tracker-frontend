@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Lo-icg/user_tracker_frontend.git/static/css/main.fca6e939.css",
+    "main.js": "/Lo-icg/user_tracker_frontend.git/static/js/main.1f715335.js",
+    "static/js/453.60ef14e3.chunk.js": "/Lo-icg/user_tracker_frontend.git/static/js/453.60ef14e3.chunk.js",
+    "index.html": "/Lo-icg/user_tracker_frontend.git/index.html",
+    "main.fca6e939.css.map": "/Lo-icg/user_tracker_frontend.git/static/css/main.fca6e939.css.map",
+    "main.1f715335.js.map": "/Lo-icg/user_tracker_frontend.git/static/js/main.1f715335.js.map",
+    "453.60ef14e3.chunk.js.map": "/Lo-icg/user_tracker_frontend.git/static/js/453.60ef14e3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fca6e939.css",
+    "static/js/main.1f715335.js"
+  ]
+}
