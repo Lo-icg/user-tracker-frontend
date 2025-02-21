@@ -46,6 +46,6 @@
   "devDependencies": {
     "gh-pages": "^6.3.0"
   },
-  "homepage": "https://github.com/Lo-icg/user_tracker_frontend.git"
+  "homepage": "https://github.com/Lo-icg/user-tracker-frontend"
 
 }
