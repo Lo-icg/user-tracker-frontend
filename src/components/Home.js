@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { auth } from "../firebase";
-import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 import "../styles.css";
@@ -9,33 +7,38 @@ const Home = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
+  // Simulating user authentication check (e.g., from localStorage or sessionStorage)
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => unsubscribe();
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
   }, []);
 
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      navigate("/login"); // Redirect to login page after logout
-    } catch (error) {
-      console.error("Error logging out:", error.message);
-    }
+  const handleLogin = (loggedInUser) => {
+    setUser(loggedInUser);
+    localStorage.setItem("user", JSON.stringify(loggedInUser)); // Store user session
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem("user"); // Clear user session
+    navigate("/login");
   };
 
   return (
     <div className="home-container">
       {!user ? (
-        <Login /> // Show Login if not logged in
+        <Login onLogin={handleLogin} /> // Pass login function to Login component
       ) : (
         <>
           {/* Logout Button on the Top Right */}
-          <button className="logout-button" onClick={handleLogout}>🚪 Log Out</button>
+          <button className="logout-button" onClick={handleLogout}>
+            🚪 Log Out
+          </button>
+
           {/* {Menu Button} */}
           <button className="menu-button">☰ Menu</button>
-
 
           <h2 className="welcome-text">Welcome to the Tracking System</h2>
 
@@ -47,10 +50,9 @@ const Home = () => {
             </div>
 
             <div className="widget" onClick={() => navigate("/devices")}>
-                <h3>📡 Devices</h3>
-                 <p>Manage connected tracking devices.</p>
+              <h3>📡 Devices</h3>
+              <p>Manage connected tracking devices.</p>
             </div>
-
 
             {/* New History Widget */}
             <div className="widget" onClick={() => navigate("/history")}>
