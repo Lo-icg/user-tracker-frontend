@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { db } from "../firebase"; // Import Firebase Database
-import { collection, getDocs } from "firebase/firestore"; // Firestore methods
 import "../styles.css";
 
 const History = () => {
@@ -9,20 +7,12 @@ const History = () => {
   const [historyData, setHistoryData] = useState([]);
 
   useEffect(() => {
-    const fetchHistory = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "history"));
-        const data = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setHistoryData(data);
-      } catch (error) {
-        console.error("Error fetching history data:", error);
-      }
-    };
-
-    fetchHistory();
+    // Dummy data (replace this with an API call if needed)
+    const dummyData = [
+      { id: 1, name: "Device A", number: "12345", time: "10:00 AM", longitude: "120.98", latitude: "14.60" },
+      { id: 2, name: "Device B", number: "67890", time: "11:15 AM", longitude: "121.02", latitude: "14.65" },
+    ];
+    setHistoryData(dummyData);
   }, []);
 
   return (
