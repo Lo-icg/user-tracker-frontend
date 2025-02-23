@@ -15,8 +15,8 @@ const SignUp = () => {
     setSuccessMessage(""); // Clear previous messages
 
     try {
-      // const response = await fetch("https://dutch-melly-spring-boot-api-e977e717.koyeb.app/user/signup", {
-      const response = await fetch("http://localhost:8080/user/signup", {
+      const response = await fetch("https://dutch-melly-spring-boot-api-e977e717.koyeb.app/user/signup", {
+     // const response = await fetch("http://localhost:8080/user/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
